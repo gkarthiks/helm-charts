@@ -19,4 +19,24 @@ entries:
     urls:
     - https://gkarthiks.github.io/helm-charts/charts/prometheus-kafka-exporter/charts/prometheus-kafka-exporter-0.1.0.tgz
     version: 0.1.0
-generated: 2019-06-04T19:48:28.976013789-07:00
+  prometheus-couchdb-exporter:
+  - apiVersion: v1
+    appVersion: "22"
+    created: 2019-06-04T21:19:35.643624438-07:00
+    description: A Helm chart to export the metrics from couchdb in Prometheus format.
+    digest: fa714d5b8b0aa4890a2fd8feacdfd34e398dafb4a29e95f1e2aaf2f05b4c3518
+    engine: gotpl
+    home: https://gkarthiks.github.io/helm-charts/charts/couchdb-prometheus-exporter
+    keywords:
+    - couchdb-exporter
+    - prometheus
+    maintainers:
+    - email: github.gkarthiks@gmail.com
+      name: gkarthiks
+    name: prometheus-couchdb-exporter
+    sources:
+    - https://github.com/gesellix/couchdb-prometheus-exporter
+    urls:
+    - https://gkarthiks.github.io/helm-charts/charts/prometheus-couchdb-exporter/charts/prometheus-couchdb-exporter-0.1.0.tgz
+    version: 0.1.0
+generated: 2019-06-04T21:19:35.63767551-07:00
