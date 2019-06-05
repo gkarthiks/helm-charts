@@ -2,10 +2,10 @@ apiVersion: v1
 entries:
   prometheus-kafka-exporter:
   - apiVersion: v1
-    appVersion: "1.0"
-    created: 2019-06-01T11:15:35.216423265-07:00
+    appVersion: v1.2.0
+    created: 2019-06-04T19:30:39.354727569-07:00
     description: Prometheus metrics exporter for Kafka
-    digest: d8d559f7826f8d21f7b26e5dc5d29e501194051c8058f46029cd81c8ce1820ec
+    digest: f7058687e5f4e1d7ee38f1f705694ed95be8ff8f1711176c367ca119e42a6f68
     home: https://gkarthiks.github.io/helm-charts/prometheus-kafka-exporter
     keywords:
     - prometheus
@@ -17,6 +17,6 @@ entries:
     sources:
     - https://github.com/danielqsj/kafka_exporter
     urls:
-    - https://gkarthiks.github.io/helm-charts/charts/prometheus-kafka-exporter/charts/prometheus-kafka-exporter-0.1.0.tgz
+    - http://127.0.0.1:8879/prometheus-kafka-exporter-0.1.0.tgz
     version: 0.1.0
-generated: 2019-06-01T11:15:35.21014105-07:00
+generated: 2019-06-04T19:30:39.348092141-07:00
