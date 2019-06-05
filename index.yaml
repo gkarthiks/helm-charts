@@ -17,6 +17,6 @@ entries:
     sources:
     - https://github.com/danielqsj/kafka_exporter
     urls:
-    - http://127.0.0.1:8879/prometheus-kafka-exporter-0.1.0.tgz
+    - https://gkarthiks.github.io/helm-charts/charts/prometheus-kafka-exporter/charts/prometheus-kafka-exporter-0.1.0.tgz
     version: 0.1.0
 generated: 2019-06-04T19:30:39.348092141-07:00
