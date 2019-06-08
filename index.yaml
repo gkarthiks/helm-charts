@@ -39,4 +39,21 @@ entries:
     urls:
     - https://gkarthiks.github.io/helm-charts/charts/prometheus-couchdb-exporter/charts/prometheus-couchdb-exporter-0.1.0.tgz
     version: 0.1.0
-generated: 2019-06-04T21:19:35.63767551-07:00
+  ip-geo-locator:
+  - apiVersion: v1
+    appVersion: v0.1.0
+    created: 2019-06-07T20:04:39.844882437-07:00
+    description: A Helm chart for the Geolocating service of any IP addresses
+    digest: c0b3f3101ffe6e82d4b7c92f70eb1fd4bb276ffc04d5a2e9fc50720bd05b3a9c
+    home: https://gkarthiks.github.io/helm-charts/charts/ip-geo-locator
+    maintainers:
+    - email: github.gkarthiks@gmail.com
+      name: gkarthiks
+    name: ip-geo-locator
+    sources:
+    - https://github.com/gkarthiks/ip-geo-locator
+    - http://geoiplookup.net/
+    urls:
+    - https://gkarthiks.github.io/helm-charts/charts/ip-geo-locator/charts/ip-geo-locator-0.1.0.tgz
+    version: 0.1.0
+generated: 2019-06-07T20:04:39.841588038-07:00
