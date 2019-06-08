@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ template "ip-geo-locator.fullname" . }}
+  labels:
+{{ include "ip-geo-locator.labels.standard" . | indent 4 }}
+spec:
+  type: {{ .Values.service.type }}
+  ports:
+    - port: {{ .Values.service.port }}
+      targetPort: http
+      protocol: TCP
+      name: http
+  selector:
+    app: {{ template "ip-geo-locator.name" . }}
+    release: {{ .Release.Name }}
