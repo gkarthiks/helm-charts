@@ -56,4 +56,24 @@ entries:
     urls:
     - https://gkarthiks.github.io/helm-charts/charts/ip-geo-locator/charts/ip-geo-locator-0.1.0.tgz
     version: 0.1.0
-generated: 2019-06-07T20:04:39.841588038-07:00
+  prometheus-container-resource-exporter:
+  - apiVersion: v1
+    appVersion: 0.1.1
+    created: 2019-06-25T21:02:26.378888234-07:00
+    description: Prometheus metrics exporter for conatiner resources
+    digest: c57f860b9d193339a6913063102d82b25dac38264421bcab814ba5a8f5bc3736
+    home: https://gkarthiks.github.io/container-resource-exporter/
+    keywords:
+    - prometheus
+    - container
+    - resource
+    maintainers:
+    - email: github.gkarthiks@gmail.com
+      name: gkarthiks
+    name: prometheus-container-resource-exporter
+    sources:
+    - https://github.com/gkarthiks/container-resource-exporter
+    urls:
+    - https://gkarthiks.github.io/helm-charts/charts/prometheus-container-resource-exporter/prometheus-container-resource-exporter-0.1.0.tgz
+    version: 0.1.0
+generated: 2019-06-25T21:02:26.369782927-07:00
