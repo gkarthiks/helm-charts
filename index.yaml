@@ -74,7 +74,7 @@ entries:
     sources:
     - https://github.com/gkarthiks/container-resource-exporter
     urls:
-    - https://gkarthiks.github.io/helm-charts/charts/prometheus-container-resource-exporter/prometheus-container-resource-exporter-0.1.0.tgz
+    - https://gkarthiks.github.io/helm-charts/charts/prometheus-container-resource-exporter/charts/prometheus-container-resource-exporter-0.1.0.tgz
     version: 0.1.0
   cron-schedules:
   - apiVersion: v1
@@ -92,6 +92,6 @@ entries:
     sources:
     - https://github.com/gkarthiks/cronjob-schedule-table
     urls:
-    - https://gkarthiks.github.io/helm-charts/charts/cron-schedules/cron-schedules-0.1.0.tgz
+    - https://gkarthiks.github.io/helm-charts/charts/cron-schedules/charts/cron-schedules-0.1.0.tgz
     version: 0.1.0
 generated: 2019-08-23T15:21:23.920063216-07:00
