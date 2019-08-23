@@ -76,4 +76,22 @@ entries:
     urls:
     - https://gkarthiks.github.io/helm-charts/charts/prometheus-container-resource-exporter/prometheus-container-resource-exporter-0.1.0.tgz
     version: 0.1.0
-generated: 2019-06-25T21:02:26.369782927-07:00
+  cron-schedules:
+  - apiVersion: v1
+    appVersion: v0.1.0
+    created: 2019-08-23T15:22:08.536971704-07:00
+    description: A Helm chart for Kubernetes which provides the listing of CronJobs
+      and Schedules
+    digest: sha256:ae45ea4cb34f68a3c48856b192afdb4726454433c593d871d69188ada12f17b4
+    home: https://gkarthiks.github.io/cronjob-schedule-table/
+    icon: https://raw.githubusercontent.com/gkarthiks/cronjob-schedule-table/master/k8s-cron-schedule.png
+    maintainers:
+    - email: github.gkarthiks@gmail.com
+      name: gkarthiks
+    name: cron-schedules
+    sources:
+    - https://github.com/gkarthiks/cronjob-schedule-table
+    urls:
+    - https://gkarthiks.github.io/helm-charts/charts/cron-schedules/cron-schedules-0.1.0.tgz
+    version: 0.1.0
+generated: 2019-08-23T15:21:23.920063216-07:00
