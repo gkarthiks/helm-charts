@@ -10,3 +10,4 @@ sources:
 maintainers:
   - name: gkarthiks
     email: github.gkarthiks@gmail.com
+icon: https://raw.githubusercontent.com/gkarthiks/cronjob-schedule-table/master/k8s-cron-schedule.png
