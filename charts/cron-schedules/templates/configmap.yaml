@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  labels:
+    release: {{ .Release.Name }}
+    heritage: {{ .Release.Service }}
+  name: {{ template "cron-schedules.fullname" . }}
+data:
+  cron.html: |
+{{ (.Files.Get "schedule.html") .}}

@@ -1,0 +1,58 @@
+apiVersion: apps/v1beta2
+kind: Deployment
+metadata:
+  name: {{ template "cron-schedules.fullname" . }}
+  labels:
+{{ include "cron-schedules.labels.standard" . | indent 4 }}
+spec:
+  replicas: {{ .Values.replicaCount }}
+  selector:
+    matchLabels:
+{{ include "cron-schedules.labels.standard" . | indent 6 }}
+  template:
+    metadata:
+      labels:
+{{ include "cron-schedules.labels.standard" . | indent 8 }}
+    spec:
+      serviceAccountName: {{ template "cron-schedules.serviceAccountName" . }}
+      containers:
+        - env:
+          - name: "TMPL_FILE_PATH"
+            value: "/var/templates/cron.html"
+          name: {{ .Chart.Name }}
+          image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+          imagePullPolicy: {{ .Values.image.pullPolicy }}
+          ports:
+            - name: http
+              containerPort: 8080
+              protocol: TCP
+{{- if .Values.livenessProbe.enabled }}
+          livenessProbe:
+{{ toYaml .Values.livenessProbe.probe | indent 10}}
+{{- end }}
+{{- if .Values.readinessProbe.enabled }}
+          readinessProbe:
+{{ toYaml .Values.readinessProbe.probe | indent 10}}
+{{- end }}
+          resources:
+{{ toYaml .Values.resources | indent 12 }}
+          volumeMounts:
+            - mountPath: /var/templates
+              name: templates
+    {{- with .Values.nodeSelector }}
+      nodeSelector:
+{{ toYaml . | indent 8 }}
+    {{- end }}
+    {{- with .Values.affinity }}
+      affinity:
+{{ toYaml . | indent 8 }}
+    {{- end }}
+    {{- with .Values.tolerations }}
+      tolerations:
+{{ toYaml . | indent 8 }}
+    {{- end }}
+      volumes:
+        - configMap:
+            defaultMode: 420
+            name: {{ template "cron-schedules.fullname" . }}
+          name: templates

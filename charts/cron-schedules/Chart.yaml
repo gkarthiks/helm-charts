@@ -1,0 +1,13 @@
+apiVersion: v1
+appVersion: "1.0"
+description: A Helm chart for Kubernetes which provides the listing of CronJobs and Schedules
+name: cron-schedules
+home: https://gkarthiks.github.io/helm-charts/charts/cron-schedules
+name: cron-schedules
+version: 0.1.0
+sources:
+  - https://github.com/gkarthiks/cronjob-schedule-table
+maintainers:
+  - name: gkarthiks
+    email: github.gkarthiks@gmail.com
+icon: https://raw.githubusercontent.com/gkarthiks/cronjob-schedule-table/master/k8s-cron-schedule.png
