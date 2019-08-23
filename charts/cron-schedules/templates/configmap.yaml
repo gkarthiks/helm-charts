@@ -1,0 +1,9 @@
+apiVersion: v1
+data:
+  cron.html: |
+{{ (.Files.Get "schedule.html") .}}
+kind: ConfigMap
+metadata:
+  labels:
+{{ include "cron-schedules.labels.standard" . | indent 4 }}
+  name: {{ template "cron-schedules.fullname" . }}
