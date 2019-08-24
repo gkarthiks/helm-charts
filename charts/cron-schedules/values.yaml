@@ -11,9 +11,12 @@ serviceAccount:
 
 replicaCount: 1
 
+clusterScope:
+  enabled: true
+
 image:
   repository: gkarthics/cronjob-schedule-table
-  tag: latest
+  tag: v0.1.1
   pullPolicy: IfNotPresent
 
 livenessProbe:

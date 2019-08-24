@@ -4,7 +4,7 @@ description: A Helm chart for Kubernetes which provides the listing of CronJobs 
 name: cron-schedules
 home: https://gkarthiks.github.io/helm-charts/charts/cron-schedules
 name: cron-schedules
-version: 0.1.0
+version: 0.1.1
 sources:
   - https://github.com/gkarthiks/cronjob-schedule-table
 maintainers:
