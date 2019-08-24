@@ -53,9 +53,10 @@
 
     <table bgcolor="#FFFFFF" width="100%" border="0" cellspacing="0"
            cellpadding="0">
+
         <tr class="header">
             <td style="padding: 40px;">
-                CronJob Schedule in {{ .Namespace }} namespace
+                CronJob Schedule in {{ .Namespace }} namespace{{ if eq .Namespace "all" }}s{{ end }}
             </td>
         </tr>
         <tr class="content">
@@ -72,7 +73,11 @@
                         <th>S No</th>
                         <th>Name</th>
                         <th>Schedules</th>
+                        {{ if eq .Namespace "all" }}
+                        <th>Namespace</th>
+                        {{ end }}
                     </tr>
+                    {{ $root := . }}
                     {{range $idx, $ele := .CronJobLists}}
                         <tr>
                             <td>
@@ -84,6 +89,11 @@
                             <td>
                                 <a href="{{ $ele.LinkFormat }}" target="_blank">{{ $ele.Schedule }}</a>
                             </td>
+                            {{ if eq $root.Namespace "all" }}
+                            <td>
+                                {{ $ele.Namespace }}
+                            </td>
+                            {{ end }}
                         </tr>
                     {{ end }}
                 </table>

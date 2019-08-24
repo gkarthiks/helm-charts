@@ -61,3 +61,4 @@ The following table lists the configurable parameters and their default values.
 | `affinity`             | affinity settings for proxy pod assignments         | {}                                      |
 | `readinessProbe`       | readiness probe, as of now there is no endpoint to check. | `false`                           |
 | `livenessProbe`        | liveness probe, as of now there is no endpoint to check. | `false`                            |
+| clusterScope.enabled   | To list the cronjobs on the cluster scope           | `true`                                  |
