@@ -78,6 +78,23 @@ entries:
     version: 0.1.0
   cron-schedules:
   - apiVersion: v1
+    appVersion: "1.0"
+    created: 2019-08-23T20:26:18.995101306-07:00
+    description: A Helm chart for Kubernetes which provides the listing of CronJobs
+      and Schedules
+    digest: 44b5447faa4911f678e7cd525c41a5ec7448db9b9c801ebafc4150fd46e737bf
+    home: https://gkarthiks.github.io/helm-charts/charts/cron-schedules
+    icon: https://raw.githubusercontent.com/gkarthiks/cronjob-schedule-table/master/k8s-cron-schedule.png
+    maintainers:
+    - email: github.gkarthiks@gmail.com
+      name: gkarthiks
+    name: cron-schedules
+    sources:
+    - https://github.com/gkarthiks/cronjob-schedule-table
+    urls:
+    - https://gkarthiks.github.io/helm-charts/charts/cron-schedules/charts/cron-schedules-0.1.1.tgz
+    version: 0.1.1
+  - apiVersion: v1
     appVersion: v0.1.0
     created: 2019-08-23T15:22:08.536971704-07:00
     description: A Helm chart for Kubernetes which provides the listing of CronJobs
@@ -94,4 +111,4 @@ entries:
     urls:
     - https://gkarthiks.github.io/helm-charts/charts/cron-schedules/charts/cron-schedules-0.1.0.tgz
     version: 0.1.0
-generated: 2019-08-23T15:21:23.920063216-07:00
+generated: 2019-08-23T20:26:18.992751766-07:00
