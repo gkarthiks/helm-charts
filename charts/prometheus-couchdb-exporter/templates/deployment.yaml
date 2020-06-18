@@ -30,7 +30,27 @@ spec:
                     "-telemetry.address=0.0.0.0:9984",
                     "-logtostderr",
                     "-couchdb.uri={{ .Values.couchdb.uri }}",
+{{- if .Values.couchdb.username }}
+                    "-couchdb.username={{ .Values.couchdb.username }}",
+{{- end }}
+{{- if .Values.couchdb.password }}
+                    "-couchdb.password={{ .Values.couchdb.password }}",
+{{- end }}
                     "-databases={{ .Values.couchdb.databases }}"]
+
+{{- if .Values.secretName }}
+          env:
+            - name: COUCHDB.USERNAME
+              valueFrom:
+                secretKeyRef:
+                  name: {{ .Values.secretName }}
+                  key: adminUsername
+            - name: COUCHDB.PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: {{ .Values.secretName }}
+                  key: adminPassword
+{{- end }}
           ports:
             - name: http
               containerPort: 9984
