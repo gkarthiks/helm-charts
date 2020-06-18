@@ -3,7 +3,7 @@ appVersion: "22"
 description: A Helm chart to export the metrics from couchdb in Prometheus format.
 name: prometheus-couchdb-exporter
 home: https://gkarthiks.github.io/helm-charts/charts/couchdb-prometheus-exporter
-version: 0.1.0
+version: 0.1.2
 keywords:
 - couchdb-exporter
 - prometheus
