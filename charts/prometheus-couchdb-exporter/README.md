@@ -61,6 +61,9 @@ The following table lists the configurable parameters and their default values.
 | `podAnnotations`	     | annotations to add to each pod					   | {}                                      |
 | `couchdb.uri`          | address of the couchdb                              | `http://couchdb.default.svc:5984`       |
 | `couchdb.databases`    | comma separated databases to monitor                | `_all_dbs`                              |
+| `couchdb.username`     | username for couchdb                                |                                         |
+| `couchdb.password`     | password for couchdb                                |                                         |
+| `secretName`           | secret to pull adminUsername and adminPassword      |                                         |
 
 
 For more information please refer to the [couchdb-prometheus-exporter]https://github.com/gesellix/couchdb-prometheus-exporter) documentation.
