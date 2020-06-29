@@ -42,22 +42,26 @@ The command removes all the Kubernetes components associated with the chart and 
 
 The following table lists the configurable parameters and their default values.
 
-| Parameter              | Description                                         | Default                   |
-| ---------------------- | --------------------------------------------------- | ------------------------- |
-| `replicaCount`         | desired number of prometheus-kafka-exporter pods    | `1`                       |
-| `image.repository`     | prometheus-kafka-exporter image repository          | `danielqsj/kafka-exporter`|
-| `image.tag`            | prometheus-kafka-exporter image tag                 | `latest`                  |
-| `image.pullPolicy`     | image pull policy                                   | `IfNotPresent`            |
-| `resources`            | cpu/memory resource requests/limits                 | {}                        |
-| `service.type`         | desired service type                                | `ClusterIP`               |
-| `service.port`         | service external port                               | `9308`                    |
-| `service.annotations`  | annotations for service                             | {}                        |
-| `kafkaServer`          | Kafka server addresses as an array with port number |                           |
-| `annotations`          | pod annotations for easier discovery                | {}                        |
-| `rbac.create`           | Specifies whether RBAC resources should be created.| `true`                    |
-| `rbac.pspEnabled`       | Specifies whether a PodSecurityPolicy should be created.| `true`               |
-| `serviceAccount.create` | Specifies whether a service account should be created.| `true`                 |
-| `serviceAccount.name`   | Name of the service account.|                                                  |
+| Parameter                                        | Description                                              | Default                     |
+| ------------------------------------------------ | -------------------------------------------------------- | --------------------------- |
+| `replicaCount`                                   | desired number of prometheus-kafka-exporter pods         | `1`                         |
+| `image.repository`                               | prometheus-kafka-exporter image repository               | `danielqsj/kafka-exporter`  |
+| `image.tag`                                      | prometheus-kafka-exporter image tag                      | `latest`                    |
+| `image.pullPolicy`                               | image pull policy                                        | `IfNotPresent`              |
+| `resources`                                      | cpu/memory resource requests/limits                      | {}                          |
+| `service.type`                                   | desired service type                                     | `ClusterIP`                 |
+| `service.port`                                   | service external port                                    | `9308`                      |
+| `service.annotations`                            | annotations for service                                  | {}                          |
+| `kafkaServer`                                    | Kafka server addresses as an array with port number      |                             |
+| `annotations`                                    | pod annotations for easier discovery                     | {}                          |
+| `rbac.create`                                    | Specifies whether RBAC resources should be created.      | `true`                      |
+| `rbac.pspEnabled`                                | Specifies whether a PodSecurityPolicy should be created. | `true`                      |
+| `serviceAccount.create`                          | Specifies whether a service account should be created.   | `true`                      |
+| `serviceAccount.name`                            | Name of the service account.                             | ``                          |
+| `prometheus.serviceMonitor.enabled.`             | Whether you would like to enable a serviceMonitor        | `true`                      |
+| `prometheus.serviceMonitor.namespace.`           | The namespace to create the serviceMonitor in            | `monitoring`                |
+| `prometheus.serviceMonitor.interval`             | Interval at which metrics should be scraped              | `prometheus-kafka-exporter` |
+| `prometheus.serviceMonitor.additionalLabels.app` | Additional labels to add to the ServiceMonitor           | `{}`                       |
 
 For more information please refer to the [kafka_exporter](https://github.com/danielqsj/kafka_exporter) documentation.
 
