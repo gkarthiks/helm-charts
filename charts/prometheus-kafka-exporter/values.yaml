@@ -29,8 +29,7 @@ prometheus:
     enabled: true
     namespace: monitoring
     interval: "30s"
-    additionalLabels:
-      app: prometheus-kafka-exporter
+    additionalLabels: {}
 
 resources: {}
   # We usually recommend not to specify default resources and to leave this as a conscious
