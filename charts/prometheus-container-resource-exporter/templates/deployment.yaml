@@ -27,13 +27,18 @@ spec:
         - name: {{ .Chart.Name }}
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
           imagePullPolicy: {{ .Values.image.pullPolicy }}
-{{- if .Values.runScope.local }}
+{{- if and .Values.runScope.local (not .Values.runScope.namespaces)  }}
           env:
           - name: WATCH_NAMESPACE
             valueFrom:
               fieldRef:
                 apiVersion: v1
                 fieldPath: metadata.namespace
+{{- end }}
+{{- if and .Values.runScope.local .Values.runScope.namespaces  }}
+          env:
+          - name: WATCH_NAMESPACE
+            value: {{ join "," .Values.runScope.namespaces }}
 {{- end }}
           ports:
             - containerPort: 9000
