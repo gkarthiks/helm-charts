@@ -48,3 +48,8 @@ nodeSelector: {}
 tolerations: []
 
 affinity: {}
+
+tls:
+  enabled: true
+  mountPath: /secret/certs
+  secretName: toto
