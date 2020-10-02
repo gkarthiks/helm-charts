@@ -28,7 +28,7 @@ spec:
             - '--kafka.server={{ $server }}'
           {{- end }}
           {{- if .Values.tls.enabled }}
-            - '--tls.enabled=true'
+            - '--tls.enabled'
             - '--tls.ca-file={{ .Values.tls.mountPath }}/ca.crt'
             - '--tls.cert-file={{ .Values.tls.mountPath }}/tls.crt'
             - '--tls.key-file={{ .Values.tls.mountPath }}/tls.key'
