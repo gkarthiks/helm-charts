@@ -3,6 +3,24 @@ entries:
   prometheus-kafka-exporter:
   - apiVersion: v1
     appVersion: v1.2.0
+    created: 2020-10-02T12:30:35.284679081+05:30
+    description: Prometheus metrics exporter for Kafka
+    digest: 9d88694be4d21c7b214826196df081f2f3554937b4cb804bb2cb8953922699b8
+    home: https://gkarthiks.github.io/helm-charts/charts/prometheus-kafka-exporter
+    keywords:
+    - prometheus
+    - kafka
+    maintainers:
+    - email: github.gkarthiks@gmail.com
+      name: gkarthiks
+    name: prometheus-kafka-exporter
+    sources:
+    - https://github.com/danielqsj/kafka_exporter
+    urls:
+    - https://gkarthiks.github.io/helm-charts/charts/prometheus-kafka-exporter/charts/prometheus-kafka-exporter-0.1.3.tgz
+    version: 0.1.3
+  - apiVersion: v1
+    appVersion: v1.2.0
     created: 2020-09-29T00:22:42.446660212+05:30
     description: Prometheus metrics exporter for Kafka
     digest: e7e2b8736c4ce25f766813f858247e41d98f983564f4e9deb00dc2db3c29d382
@@ -205,4 +223,4 @@ entries:
     urls:
     - https://gkarthiks.github.io/helm-charts/charts/cron-schedules/charts/cron-schedules-0.1.0.tgz
     version: 0.1.0
-generated: 2020-09-29T00:33:39.883501832+05:30
+generated: 2020-10-02T12:32:51.739760068+05:30
