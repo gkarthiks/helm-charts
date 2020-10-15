@@ -1,5 +1,7 @@
 # prometheus-kafka-exporter
 
+DEPRECATED and moved to <https://github.com/prometheus-community/helm-charts>
+
 [kafka_exporter](https://github.com/danielqsj/kafka_exporter) is a Prometheus exporter for Kafka metrics.
 
 ## TL;DR;
