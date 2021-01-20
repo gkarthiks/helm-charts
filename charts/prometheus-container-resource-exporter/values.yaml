@@ -5,6 +5,8 @@
 runScope:
   local: true
   cluster: false
+  # Set namespaces to watch, default to the namespace deployed in
+  # namespaces: []
 
 replicaCount: 1
 
@@ -25,6 +27,7 @@ serviceAccount:
 service:
   type: ClusterIP
   port: 8080
+  additionalLabels: {}
 
 ingress:
   enabled: false
@@ -56,3 +59,10 @@ nodeSelector: {}
 tolerations: []
 
 affinity: {}
+
+monitoring:
+  serviceMonitor:
+    enabled: false
+    additionalLabels: {}
+    metricRelabelings: []
+    relabelings: []

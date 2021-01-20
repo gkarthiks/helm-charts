@@ -6,10 +6,8 @@ kind: Ingress
 metadata:
   name: {{ $fullName }}
   labels:
-    app: {{ template "prometheus-container-resource-exporter.name" . }}
-    chart: {{ template "prometheus-container-resource-exporter.chart" . }}
-    release: {{ .Release.Name }}
-    heritage: {{ .Release.Service }}
+{{ include "cre-common.labels" . | indent 4 }}
+
 {{- with .Values.ingress.annotations }}
   annotations:
 {{ toYaml . | indent 4 }}

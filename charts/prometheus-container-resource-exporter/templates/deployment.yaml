@@ -1,12 +1,10 @@
-apiVersion: apps/v1beta2
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: {{ template "prometheus-container-resource-exporter.fullname" . }}
   labels:
-    app: {{ template "prometheus-container-resource-exporter.name" . }}
-    chart: {{ template "prometheus-container-resource-exporter.chart" . }}
-    release: {{ .Release.Name }}
-    heritage: {{ .Release.Service }}
+{{ include "cre-common.labels" . | indent 4 }}
+
 spec:
   replicas: {{ .Values.replicaCount }}
   selector:

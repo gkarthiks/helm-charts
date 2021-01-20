@@ -1,0 +1,32 @@
+{{ if .Values.monitoring.serviceMonitor.enabled }}
+apiVersion: monitoring.coreos.com/v1
+kind: ServiceMonitor
+metadata:
+  name: {{ template "prometheus-container-resource-exporter.fullname" . }}
+  labels:
+{{ include "cre-common.labels" . | indent 4 }}
+{{- with .Values.monitoring.serviceMonitor.additionalLabels }}
+  {{- toYaml . | nindent 4 }}
+{{- end }}
+spec:
+  selector:
+    matchLabels:
+{{ include "cre-common.labels" . | indent 6 }}
+{{- with .Values.service.additionalLabels }}
+  {{- toYaml . | nindent 6 }}
+{{- end }}
+  endpoints:
+  - port: http
+    path: /metrics
+    {{- with .Values.monitoring.serviceMonitor.metricsRelabelings }}
+    metricRelabelings:
+      {{- toYaml . | nindent 6 }}
+    {{- end }}
+    {{- with .Values.monitoring.serviceMonitor.relabelings }}
+    relabelings:
+      {{- toYaml . | nindent 4 }}
+    {{- end }}
+  namespaceSelector:
+    matchNames:
+    - {{ .Release.Namespace }}
+{{- end }}

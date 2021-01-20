@@ -3,10 +3,8 @@ apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRole
 metadata:
   labels:
-    app: {{ template "prometheus-container-resource-exporter.name" . }}
-    chart: {{ template "prometheus-container-resource-exporter.chart" . }}
-    release: {{ .Release.Name }}
-    heritage: {{ .Release.Service }}
+{{ include "cre-common.labels" . | indent 4 }}
+
   name: {{ template "prometheus-container-resource-exporter.fullname" . }}
 rules:
 - apiGroups:
