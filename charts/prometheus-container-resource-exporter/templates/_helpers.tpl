@@ -41,3 +41,13 @@ Create the name of the service account to use
     {{ default "default" .Values.serviceAccount.name }}
 {{- end -}}
 {{- end -}}
+
+{{/*
+Common labels
+*/}}
+{{- define "cre-common.labels" -}}
+app: {{ template "prometheus-container-resource-exporter.name" . }}
+chart: {{ template "prometheus-container-resource-exporter.chart" . }}
+release: {{ .Release.Name }}
+heritage: {{ .Release.Service }}
+{{- end -}}
