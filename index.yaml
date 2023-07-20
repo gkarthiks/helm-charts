@@ -4,6 +4,28 @@ entries:
   - annotations:
       artifacthub.io/images: |
         - name: apid-helper
+          image: quay.io/gkarthics/apid-helper:v0.2.2
+      artifacthub.io/license: MIT License
+      artifacthub.io/links: |
+        - name: GitHub
+          url: https://github.com/gkarthiks/argo-apid-helper
+      artifacthub.io/maintainers: |
+        - name: Karthikeyan Govindaraj
+          email: github.gkarthiks@gmail.com
+    apiVersion: v2
+    appVersion: v0.2.2
+    created: "2023-07-20T11:35:35.440262832Z"
+    description: A Helm chart for Kubernetes API Deprecation Helper for Kubernetes
+      that are managed by ArgoCD
+    digest: e7ae1d925de09fc7ea92dbe635ade7dc5d79a2efcf777e745a8723e553d0684c
+    name: apid-helper
+    type: application
+    urls:
+    - https://gkarthiks.github.io/helm-charts/apid-helper-0.1.3.tgz
+    version: 0.1.3
+  - annotations:
+      artifacthub.io/images: |
+        - name: apid-helper
           image: quay.io/gkarthics/apid-helper:v0.2.0
       artifacthub.io/license: MIT License
       artifacthub.io/links: |
@@ -317,4 +339,4 @@ entries:
     urls:
     - https://gkarthiks.github.io/helm-charts/charts/prometheus-kafka-exporter/charts/prometheus-kafka-exporter-0.1.0.tgz
     version: 0.1.0
-generated: "2022-05-16T07:24:56.783887866Z"
+generated: "2023-07-20T11:35:35.439550516Z"
